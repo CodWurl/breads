@@ -1,7 +1,7 @@
 const React = require ('react')
 const Default = require ('./layouts/Default')
 
-function show ({bread}) {
+function Show ({bread}) {
     //Confirm we are getting our bread data in the terminal
     //console.log(bread.name)
      return (
