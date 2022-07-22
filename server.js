@@ -1,4 +1,5 @@
 // DEPENDENCIES
+const React = require ('react')
 const express = require('express')
 
 // CONFIGURATION
@@ -32,7 +33,7 @@ app.get('/', (req, res) => {
   const breadsController = require('./controllers/breads_controller.js')
   app.use('/breads', breadsController)
 
-  // 404 Page
+  // 404 Page route
 app.get('*', (req, res) => {
   res.send('404')
 })
