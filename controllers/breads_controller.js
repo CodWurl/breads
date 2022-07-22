@@ -14,7 +14,7 @@ breads.get('/', (req, res) => {
     //res.send(Bread)
 })
 
-module.exports = breads
+
 
 // SHOW
 breads.get('/:arrayIndex', (req, res) => {
@@ -26,4 +26,8 @@ breads.get('/:arrayIndex', (req, res) => {
       res.render('404')
     }
   })
+
+  module.exports = breads
   
+  
+ 
