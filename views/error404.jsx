@@ -1,4 +1,6 @@
 const React = require ('react')
+const Default = require ('./views')
+
 //Adding 404 page view
 function error404 () {
 return (
