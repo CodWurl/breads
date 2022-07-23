@@ -1,20 +1,18 @@
 const React = require ('react')
-const Def = require ('./default')
-
 
 
 
 //Adding 404 page view
-function error404 ({bread}) {
+function Default (html) {
 return (
     <Default>
-        <main>
+        <head>
             <h1>404 : PAGE NOT FOUND</h1>
             <p>Oops, sorry, we can't find this page!</p>
-        </main>
+        </head>
     </Default>
 )
 
 }
 
-module.exports = breads
+module.exports = Default

@@ -1,9 +1,9 @@
 // DEPENDENCIES
-const React = require ('react')
+
 const express = require('express')
+require('dotenv').config()
 
 // CONFIGURATION
-require('dotenv').config()
 const PORT = process.env.PORT
 const app = express()
 

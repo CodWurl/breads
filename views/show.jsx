@@ -12,10 +12,10 @@ function Show ({bread}) {
                 and it 
                 {
                 bread.hasGluten 
-                ? <span>does</span>
-                : <span>does not</span>
+                ? <span> does </span>
+                : <span> does not </span>
                 }
-                have gluten
+                have gluten.
             </p>
             <img src = {bread.image} alt = {bread.name} />
             <li><a href = "/breads">Go home</a></li>
