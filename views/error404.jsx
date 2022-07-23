@@ -1,5 +1,5 @@
 const React = require ('react')
-const Default = require ('./views')
+const Default = require ('./layouts/Default')
 
 //Adding 404 page view
 function error404 () {
