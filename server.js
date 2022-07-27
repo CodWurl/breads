@@ -37,7 +37,7 @@ app.get('/', (req, res) => {
 
   // 404 Page route
 app.get('*', (req, res) => {
-  render.send('error404')
+  res.render('error404')
 })
 
   

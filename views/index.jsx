@@ -6,7 +6,7 @@ const Default = require('./layouts/Default')
 function Index({ breads, title }) {
     return (
         <Default title={title}>
-            <link href="\breads\public\images\favicon.ico" rel="icon" type="image/x-icon" />
+            
 
 
             <h2>View Existing Bread's or Add your own below by clicking "Add A New Bread"</h2>
