@@ -6,6 +6,7 @@ function Default(html) {
       <html>
       <head>
         <title>{html.title || 'Default'}</title>
+        {/*Bread CRUD 5 Favicon*/}
         <link rel="shortcut icon" type="/image/png" href="/images/breads.ico"/>
         <link rel="apple-touch-icon" href="/images/breads.png"/>
         <link rel="icon" sizes="192x192" href="/images/breads.png"/>

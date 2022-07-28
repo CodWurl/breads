@@ -6,6 +6,8 @@ function Show({ bread, index }) {
     //console.log(bread.name)
     return (
         <Default>
+            {/*Bread CRUD 6 Bonus Array of Ingredients*/}
+            {/*ADD SOME CSS DESIGN*/}
             <h2>Show Page</h2>
             <h6>{bread.name}</h6>
             <h6>Ingredients</h6>
