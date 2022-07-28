@@ -74,6 +74,12 @@ breads.delete('/:indexArray', (req, res) =>{
   res.status(303).redirect('/breads')
 })
 
+//Ingredients Route
+breads.get('/IngredientsList', (req, res) => {
+  res.render('IngredientsList')
+})
+
+
 
   module.exports = breads
   

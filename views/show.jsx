@@ -8,6 +8,10 @@ function Show({ bread, index }) {
         <Default>
             <h2>Show Page</h2>
             <h3>{bread.name}</h3>
+
+            <p>
+               <span>Ingredients</span>
+            </p>
             
 
             <p>
@@ -23,13 +27,20 @@ function Show({ bread, index }) {
                     <input type='submit' value="DELETE" />
 
                     <a href={`/breads/${index}/edit`}><button>Edit</button></a>
-                    
+
                 </form>
 
             </p>
             <img src={bread.image} alt={bread.name} />
             <li><a href="/breads">Go home</a></li>
+
+            
         </Default>
     )
 }
+
+
+
+
+
 module.exports = Show
