@@ -15,13 +15,14 @@ module.exports = [
       name: 'Gluten-Free',
       hasGluten: false,
       image: 'https://images.unsplash.com/photo-1546538490-0fe0a8eba4e6?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80',
-      ingredients : '',
+      ingredients : 'active dried yeast, sugar (to kick-start the yeast action), warm water, psyllium husk (which acts as a gluten substitute – more on that below), potato starch (not to be confused with potato flour – these are two completely different things!), brown rice flour (needs to be very finely milled, also called “superfine”), buckwheat flour, salt (adds flavour), apple cider vinegar'
+      
     },
     {
       name: 'Pumpernickel',
       hasGluten: true,
       image: 'https://images.unsplash.com/photo-1586444248902-2f64eddc13df?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80',
-      ingredients : '',
+      ingredients : '1 1/3 dark rye flour, 1/2 cup cornmeal, 1/4 cup whole-wheat flour, 1/4 cup unsweetened cocoa powder, 1 tablespoon kosher salt, 2 cups milk, 1 1/2 tablespoons dark brown sugar, 1 tablespoon active dry yeast, 1/4 cup unsulphured molasses, 3 tablespoons unsalted butter, softened, plus more for greasing',
     },
   ]
   

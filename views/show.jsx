@@ -7,9 +7,9 @@ function Show({ bread, index }) {
     return (
         <Default>
             <h2>Show Page</h2>
-            <h4>{bread.name}</h4>
-            <h4>Ingredients</h4>
-            <h4>{bread.ingredients}</h4>
+            <h6>{bread.name}</h6>
+            <h6>Ingredients</h6>
+            <h6>{bread.ingredients}</h6>
             
                
             
