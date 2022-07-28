@@ -8,7 +8,9 @@ function Show({ bread, index }) {
         <Default>
             <h2>Show Page</h2>
             <h3>{bread.name}</h3>
-            <a href={`/breads/${index}/edit`}><button>Edit</button></a>
+            <a href={`/breads/${index}/edit`}>
+                <button>Edit</button>
+                </a>
 
             <p>
                 and it
