@@ -9,7 +9,7 @@ module.exports = [
       name: 'French',
       hasGluten: true,
       image: 'https://images.unsplash.com/photo-1534620808146-d33bb39128b2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
-      ingredients : '',
+      ingredients : '1 tablespoon cornmeal, 6 cups all-purpose flour, 2 ½ (.25 ounce) packages active dry yeast, 1½teaspoonssalt, 2 cups warm water (110 degreesF/45degrees C), 1 egg white, 1 tablespoon water',
       },
     {
       name: 'Gluten-Free',
