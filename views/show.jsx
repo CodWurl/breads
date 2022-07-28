@@ -8,10 +8,9 @@ function Show({ bread, index }) {
         <Default>
             <h2>Show Page</h2>
             <h3>{bread.name}</h3>
-
-            <p>
-               <span>Ingredients</span>
-            </p>
+            <h1>Ingredients</h1>
+               
+            
             
 
             <p>
