@@ -1,21 +1,6 @@
 const express = require('express')
 const breads = express.Router()
 const Bread = require('../models/bread.js')
-const mongoose = require ('mongoose')
-
-breads.get('/', (req, res) => {
-  Bread.find()
-      .then(foundBreads => {
-          console.log(foundBreads)
-      })
-  // res.render('index',
-  //   {
-  //     breads: Bread,
-  //     title: 'Index Page'
-  //   }
-  // )
-})
-
 
 // OLD breads INDEX
 //breads.get('/', (req, res) => {
@@ -29,13 +14,17 @@ breads.get('/', (req, res) => {
     
 //})
 
-
-
 //res.send(Bread)
 
 // NEW
-breads.get('/new', (req, res) => {
-  res.render('new')
+breads.get('/', (req, res) => {
+  Bread.find()
+      .then(foundBreads => {
+          res.render('index', {
+              breads: foundBreads,
+              title: 'Index Page'
+          })
+      })
 })
 
 
