@@ -1,5 +1,6 @@
 // DEPENDENCIES
 const methodOverride=require('method-override')
+const mongoose = require('mongoose')
 const express = require('express')
 require('dotenv').config()
 

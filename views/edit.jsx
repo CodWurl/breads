@@ -36,4 +36,4 @@ function Edit ({bread, index}) {
 }
 
 
-module.exports = Edit
+module.exports = Editk
