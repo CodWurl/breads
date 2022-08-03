@@ -15,8 +15,6 @@ function Index({ breads, title }) {
             <div className="newButton">
                 <a href="/breads/new"><button>Add a new bread</button></a>
             </div>
-
-
             <ul>
                 {
                     breads.map((bread, index) => {

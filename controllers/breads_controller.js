@@ -2,30 +2,37 @@ const express = require('express')
 const breads = express.Router()
 const Bread = require('../models/bread.js')
 
-// OLD breads INDEX
-//breads.get('/', (req, res) => {
-    //res.render('Index',
-       // {
-       //     breads: Bread,
-       //     title: 'Index Page'
-      //  }
-  //  )
+//OLD breads INDEX
+breads.get('/', (req, res) => {
+    res.render('Index',
+        {
+            breads: Bread,
+            title: 'Index Page'
+        }
+    )
 
     
-//})
+})
+
+// NEW
+breads.get('/new', (req, res) => {
+  res.render('new')
+})
+
+
 
 //res.send(Bread)
 
 // NEW
-breads.get('/', (req, res) => {
-  Bread.find()
-      .then(foundBreads => {
-          res.render('index', {
-              breads: foundBreads,
-              title: 'Index Page'
-          })
-      })
-})
+//breads.get('/', (req, res) => {
+  //Bread.find()
+    //  .then(foundBreads => {
+      //    res.render('index', {
+        //      breads: foundBreads,
+          //    title: 'Index Page'
+          //})
+      //})
+//})
 
 
 // SHOW

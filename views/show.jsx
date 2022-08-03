@@ -12,11 +12,7 @@ function Show({ bread, index }) {
             <h6>{bread.name}</h6>
             <h6>Ingredients</h6>
             <h6>{bread.ingredients}</h6>
-            
-               
-            
-            
-
+             
             <p>
                 and it
                 {
