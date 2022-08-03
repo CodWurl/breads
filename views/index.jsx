@@ -7,8 +7,6 @@ function Index({ breads, title }) {
     return (
         <Default title={title}>
             
-
-
             <h2>View Existing Bread's or Add your own below by clicking "Add A New Bread"</h2>
             {/*<p>I have {breads[0].name} bread!</p>*/}
 
@@ -19,7 +17,7 @@ function Index({ breads, title }) {
                 {
                     breads.map((bread, index) => {
                         return (<li key={index}>
-                            <a href={`/breads/${index}`}>
+                            <a href={`/breads/${bread.id}`}>
                                 {bread.name}
                             </a>
                         </li>

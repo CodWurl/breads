@@ -1,6 +1,6 @@
 // DEPENDENCIES
 const methodOverride=require('method-override')
-//const mongoose = require('mongoose')
+const mongoose = require('mongoose')
 const express = require('express')
 require('dotenv').config()
 
@@ -41,7 +41,7 @@ app.get('*', (req, res) => {
   res.render('error404')
 })
 
-//mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true}, 
- // () => { console.log('connected to mongo: ', process.env.MONGO_URI) }
-//)
+mongoose.connect(process.env.MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true}, 
+() => { console.log('connected to mongo: ', process.env.MONGO_URI) }
+)
   

@@ -1,26 +1,23 @@
 // require mongoose 
-//const mongoose = require('mongoose')
+const mongoose = require('mongoose')
 // creating shorthand for the Schema constructor 
-// require mongoose 
-
-// creating shorthand for the Schema constructor 
-//const { Schema } = mongoose 
+const { Schema } = mongoose 
 
 // schema
-//const breadSchema = new Schema({
-  //  name: { type: String, required: true },
-   // hasGluten: Boolean,
-   // image: { type: String, default: 'http://placehold.it/500x500.png' }
-//})
+const breadSchema = new Schema({
+  name: { type: String, required: true },
+   hasGluten: Boolean,
+   image: { type: String, default: 'http://placehold.it/500x500.png' }
+})
 
 // model and export 
-//const Bread = mongoose.model('Bread', breadSchema)
-//module.exports = Bread
+const Bread = mongoose.model('Bread', breadSchema)
+module.exports = Bread
 
 
 
 
-module.exports = [
+/*module.exports = [
     {
       name: 'Rye',
       hasGluten: true,
@@ -46,5 +43,5 @@ module.exports = [
       image: 'https://images.unsplash.com/photo-1586444248902-2f64eddc13df?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1050&q=80',
       ingredients : '1 1/3 dark rye flour, 1/2 cup cornmeal, 1/4 cup whole-wheat flour, 1/4 cup unsweetened cocoa powder, 1 tablespoon kosher salt, 2 cups milk, 1 1/2 tablespoons dark brown sugar, 1 tablespoon active dry yeast, 1/4 cup unsulphured molasses, 3 tablespoons unsalted butter, softened, plus more for greasing',
     },
- ]
+ ]*/
   
