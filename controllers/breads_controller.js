@@ -7,12 +7,12 @@ const Bread = require('../models/bread.js')
 
 breads.get('/', (req, res) => {
   Bread.find()
-      .then(foundBreads => {
-          res.render('index', {
-              breads: foundBreads,
-              title: 'Index Page'
-          })
+    .then(foundBreads => {
+      res.render('index', {
+        breads: foundBreads,
+        title: 'Index Page'
       })
+    })
 })
 
 
@@ -40,13 +40,13 @@ breads.get('/new', (req, res) => {
 
 // NEW
 //breads.get('/', (req, res) => {
-  //Bread.find()
-    //  .then(foundBreads => {
-      //    res.render('index', {
-        //      breads: foundBreads,
-          //    title: 'Index Page'
-          //})
-      //})
+//Bread.find()
+//  .then(foundBreads => {
+//    res.render('index', {
+//      breads: foundBreads,
+//    title: 'Index Page'
+//})
+//})
 //})
 
 //NEW SHOW Route
@@ -78,16 +78,16 @@ breads.get('/:id', (req, res) => {
       res.render('error404')
     }
   })*/
-  
+
 
 //NEW POST Route
 // NEW CREATE Route
 
 breads.post('/', (req, res) => {
-  if(!req.body.image) {
-      req.body.image = undefined 
+  if (!req.body.image) {
+    req.body.image = undefined
   }
-  if(req.body.hasGluten === 'on') {
+  if (req.body.hasGluten === 'on') {
     req.body.hasGluten = true
   } else {
     req.body.hasGluten = false
@@ -98,7 +98,7 @@ breads.post('/', (req, res) => {
 
 
 
-  //OLD POST Route
+//OLD POST Route
 // OLD CREATE
 /*breads.post('/', (req, res) => {
   if (!req.body.image) {
@@ -114,29 +114,36 @@ breads.post('/', (req, res) => {
 })*/
 
 // UPDATE Route
-breads.put('/:arrayIndex', (req, res) => {
-  if(req.body.hasGluten === 'on'){
+breads.put('/:id', (req, res) => {
+  if (req.body.hasGluten === 'on') {
     req.body.hasGluten = true
   } else {
     req.body.hasGluten = false
   }
-  Bread[req.params.arrayIndex] = req.body
-  res.redirect(`/breads/${req.params.arrayIndex}`)
+  Bread.findByIdAndUpdate(req.params.id, req.body, { new: true })
+    .then(updateBread => {
+      console.log(updateBread)
+      res.redirect(`/breads/${req.params.id}`)
+    })
 })
 
 // EDIT Route
-breads.get('/:indexArray/edit', (req, res) => {
-  res.render('edit', {
-    bread: Bread[req.params.indexArray],
-    index: req.params.indexArray
-  })
+breads.get('/:id/edit', (req, res) => {
+  Bread.findById(req.params.id)
+    .then(foundBread => {
+      res.render('edit', {
+        bread: foundBread
+      })
+    })
 })
 
 
 //DELETE Route
-breads.delete('/:indexArray', (req, res) =>{
-  Bread.splice (req.params.indexArray, 1)
-  res.status(303).redirect('/breads')
+breads.delete('/:id', (req, res) => {
+  Bread.findByIdAndDelete(req.params.id)
+    .then(deleteBread => {
+      res.status(303).redirect('/breads')
+    })
 })
 
 //Ingredients Route
@@ -146,7 +153,7 @@ breads.get('/IngredientsList', (req, res) => {
 
 
 
-  module.exports = breads
-  
-  
- 
+module.exports = breads
+
+
+
