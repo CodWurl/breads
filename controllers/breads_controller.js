@@ -121,8 +121,8 @@ breads.put('/:id', (req, res) => {
     req.body.hasGluten = false
   }
   Bread.findByIdAndUpdate(req.params.id, req.body, { new: true })
-    .then(updateBread => {
-      console.log(updateBread)
+    .then(updatedBread => {
+      console.log(updatedBread)
       res.redirect(`/breads/${req.params.id}`)
     })
 })
@@ -141,7 +141,7 @@ breads.get('/:id/edit', (req, res) => {
 //DELETE Route
 breads.delete('/:id', (req, res) => {
   Bread.findByIdAndDelete(req.params.id)
-    .then(deleteBread => {
+    .then(deletedBread => {
       res.status(303).redirect('/breads')
     })
 })

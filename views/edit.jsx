@@ -1,7 +1,7 @@
 const React = require('react')
 const Default = require('./layouts/Default')
 
-function Edit ({bread, index}) {
+function Edit ({bread}) {
     return (
       <Default>
         <h2>Edit a bread</h2>
@@ -27,10 +27,16 @@ function Edit ({bread, index}) {
             name="hasGluten"
             id="hasGluten"
             defaultChecked={bread.hasGluten}
+           
           />
           <br />
           <input type="submit"/>
+          
         </form>
+
+        <div className="editButton">
+            <a href="/breads"><button>Edit</button></a>
+            </div>
       </Default>
     )
 }
